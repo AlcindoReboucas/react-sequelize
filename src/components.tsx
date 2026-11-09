@@ -8,7 +8,8 @@ export function Topo() {
     <header className="topo">
       <Link to="/" className="logo">🎬 Filmes Nacionais</Link>
       <nav className="pilula">
-        <NavLink to="/" end>📚 Biblioteca</NavLink>
+        <NavLink to="/" end>🎦 Biblioteca</NavLink>
+        <NavLink to="/assistidos" end>✅ Assistidos</NavLink>
         <NavLink to="/cadastrar">➕ Cadastrar filme</NavLink>
       </nav>
     </header>

@@ -78,6 +78,13 @@ a {
   gap: 22px;
 }
 
+.check{
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
 .cartao {
   position: relative;
   display: flex;

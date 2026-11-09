@@ -41,7 +41,7 @@ export async function migrar() {
       { titulo: 'O Pagador de Promessas', ano: 1962, nota: 8.0, capa: '/media/pagador-de-promessas.jpg', sinopse: 'Zé do Burro carrega uma cruz até Salvador para pagar uma promessa.' },
       { titulo: 'Ainda Estou Aqui', ano: 2024, nota: 8.2, capa: '/media/ainda-estou-aqui.jpg', sinopse: 'Eunice Paiva reconstrói a família depois que o marido desaparece na ditadura.' },
       { titulo: 'Carandiru', ano: 2003, nota: 7.5, capa: '/media/carandiru.jpg', sinopse: 'Um médico conhece as histórias dos presos do maior presídio do país.' },
-      { titulo: 'Lisbela e o Prisioneiro', ano: 2003, nota: 7.4, capa: '/media/lisbela.jpg', sinopse: 'Uma moça apaixonada por cinema se encanta por um malandro aventureiro.' },
+      { titulo: 'Lisbela e o Prisioneiro', ano: 2003, nota: 7.4, capa: '/media/lisbela.jpg', sinopse: 'Uma moça apaixonada por cinema se encanta por um malandro aventureiro.'},
     ])
   }
 }

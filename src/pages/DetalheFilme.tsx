@@ -29,6 +29,17 @@ export default function DetalheFilme() {
             <Link to={`/filmes/${filme.id}/editar`} className="voltar">✏️ Editar</Link>
           </div>
           <h1>{filme.titulo}</h1>
+          <h2> Ja Assistido</h2> 
+
+           <input className='check' type="checkbox" checked={filme.assistido} onChange={(evento) => {
+             const novoValor = evento.target.checked
+             fetch(`/api/filmes/${filme.id}`, {
+               method: 'PUT',
+               headers: { 'Content-Type': 'application/json' },
+               body: JSON.stringify({ ...filme, assistido: novoValor })
+             })
+           }} />
+
           <p className="info">
             <span className="estrela">★</span> {filme.nota} &nbsp;|&nbsp; {filme.ano}
           </p>
