@@ -37,7 +37,7 @@ Não precisa instalar o SQLite separadamente. O pacote `sqlite3` já traz o banc
   - `api.ts`: as rotas (`/api/filmes`, `/api/filmes/:id/comentarios`...)
   - `migrations.ts`: cria as tabelas (`sync()`) e os filmes de exemplo
   - `index.ts`: junta tudo e sobe o servidor
-- `src/` — React (Vite). Páginas: Biblioteca (`/`), filme com comentários (`/filmes/:id`), editar (`/filmes/:id/editar`) e cadastrar (`/cadastrar`).
+- `src/` — React (Vite). Páginas: Biblioteca (`/`), filmes assistidos (`/assistidos`), filme com comentários (`/filmes/:id`), editar (`/filmes/:id/editar`) e cadastrar (`/cadastrar`). O status de assistido pode ser atualizado pela biblioteca, pela lista de assistidos ou pela página do filme.
 - `public/media/` — as capas dos filmes, que funcionam sem internet. Os pôsteres foram tirados da Wikipedia e servem só para uso didático.
 
 Para recomeçar do zero, apague o `database.sqlite`. Os 10 filmes de exemplo são criados de novo.

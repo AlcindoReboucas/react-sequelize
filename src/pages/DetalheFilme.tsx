@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Comentarios from '../Comentarios'
-import { Capa, Topo } from '../components'
+import { Capa, ControleAssistido, Topo } from '../components'
 import type { Filme } from '../types'
 
 export default function DetalheFilme() {
@@ -29,16 +29,11 @@ export default function DetalheFilme() {
             <Link to={`/filmes/${filme.id}/editar`} className="voltar">✏️ Editar</Link>
           </div>
           <h1>{filme.titulo}</h1>
-          <h2> Ja Assistido</h2> 
-
-           <input className='check' type="checkbox" checked={filme.assistido} onChange={(evento) => {
-             const novoValor = evento.target.checked
-             fetch(`/api/filmes/${filme.id}`, {
-               method: 'PUT',
-               headers: { 'Content-Type': 'application/json' },
-               body: JSON.stringify({ ...filme, assistido: novoValor })
-             })
-           }} />
+          <ControleAssistido
+            filme={filme}
+            detalhe
+            aoAtualizar={(assistido) => setFilme({ ...filme, assistido })}
+          />
 
           <p className="info">
             <span className="estrela">★</span> {filme.nota} &nbsp;|&nbsp; {filme.ano}
