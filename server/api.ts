@@ -68,3 +68,24 @@ api.post('/filmes/:id/comentarios', async (req, res) => {
   })
   res.status(201).json(comentario)
 })
+// Altera um comentário  (UPDATE Comentarios SET ... WHERE id = ?)
+api.put('/filmes/:id/comentarios/:id', async (req, res) => {
+  const comentario = await Comentario.findByPk(req.params.id)
+  if (!comentario) {
+    res.status(404).json({ erro: 'Comentário não encontrado' })
+    return
+  }
+  await comentario.update(req.body)
+  res.json(comentario)
+})
+
+// Exclui um comentário  (DELETE FROM Comentarios WHERE id = ?)
+api.delete('/filmes/:id/comentarios/:id', async (req, res) => {
+  const comentario = await Comentario.findByPk(req.params.id)
+  if (!comentario) {
+    res.status(404).json({ erro: 'Comentário não encontrado' })
+    return
+  }
+  await comentario.destroy()
+  res.status(204).end()
+})

@@ -78,12 +78,7 @@ a {
   gap: 22px;
 }
 
-.check{
-  top: 8px;
-  right: 8px;
-  width: 20px;
-  height: 20px;
-}
+
 
 .cartao {
   position: relative;
@@ -279,6 +274,22 @@ a {
   font: inherit;
 }
 
+input {
+  width: 100%;
+  padding: 6px 12px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font: inherit;
+}
+
+button {
+  padding: 6px 12px;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  font: inherit;
+  gap: 10px;
+}
+
 .form-comentario input:focus {
   outline: none;
   border-color: #db2777;
@@ -355,4 +366,14 @@ a {
   .grade {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+
+
+
+.check{
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
 }
